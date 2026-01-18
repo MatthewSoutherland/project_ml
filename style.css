@@ -55,7 +55,7 @@ h1 {
 #nav-list li {
     color: var(--nav-list-color);
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 20px;
 }
 
 #nav-list li:hover {
