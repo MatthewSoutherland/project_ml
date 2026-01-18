@@ -1,6 +1,7 @@
 :root {
     /* primary-colors */
     --body-background-color: rgb(245, 245, 245);
+    --body-background-color-phone: rgb(155, 245, 155);
     --modal-content-background-color: rgb(254, 254, 254);
     --modal-header-background-color: #f1f1f1;
 }
@@ -26,6 +27,6 @@ button {
 /* Mobile styles */
 @media (max-width: 600px) {
   body {
-    background: lightgreen;
-  }
+    background: var(--body-background-color-phone);
+    }
 }
