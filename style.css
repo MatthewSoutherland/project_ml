@@ -1,6 +1,6 @@
 :root {
     /* primary-colors */
-    --body-background-color: rgb(215, 205, 245);
+    --body-background-color: rgb(205, 225, 240);
     --body-background-color-phone: rgb(155, 245, 155);
     --nav-list-color: rgb(10, 10, 254);
     --nav-list-hover: rgb(80, 80, 254);
@@ -16,12 +16,16 @@ body {
   background: var(--body-background-color);
   justify-items: center;
 }
+
 h1 {
-    margin: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 2rem;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 2px rgba(255,255,255,0.7);
 }
+
 .bg {
   position: fixed;
   top: 0;
