@@ -17,3 +17,15 @@ button {
   padding: 10px 16px;
   font-size: 16px;
 }
+
+/* Desktop styles */
+/* body {
+  background: lightblue;
+} */
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  body {
+    background: lightgreen;
+  }
+}
