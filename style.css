@@ -2,6 +2,8 @@
     /* primary-colors */
     --body-background-color: rgb(245, 245, 245);
     --body-background-color-phone: rgb(155, 245, 155);
+    --nav-list-color: rgb(10, 10, 254);
+    --nav-list-hover: rgb(80, 80, 254);
     --modal-content-background-color: rgb(254, 254, 254);
     --modal-header-background-color: #f1f1f1;
 }
@@ -10,9 +12,27 @@ body {
   font-family: sans-serif;
   padding: 2rem;
   background: var(--body-background-color);
-  display: flex;
-  justify-content: center;
+  justify-items: center;
 }
+
+#nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-list li {
+    color: var(--nav-list-color);
+    cursor: pointer;
+}
+
+#nav-list li:hover {
+  color: var(--nav-list-hover);
+}
+
 
 button {
   padding: 10px 16px;
