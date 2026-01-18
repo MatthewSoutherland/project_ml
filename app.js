@@ -1,3 +1,4 @@
-document.getElementById("btn").addEventListener("click", () => {
-  alert("JavaScript is working 🚀");
+
+document.addEventListener("DOMContentLoaded", async function() {
+    console.log("js read");
 });
