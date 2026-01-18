@@ -1,6 +1,6 @@
 :root {
     /* primary-colors */
-    --body-background-color: rgb(245, 245, 245);
+    --body-background-color: rgb(215, 205, 245);
     --body-background-color-phone: rgb(155, 245, 155);
     --nav-list-color: rgb(10, 10, 254);
     --nav-list-hover: rgb(80, 80, 254);
@@ -9,11 +9,34 @@
 }
 
 body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
-  padding: 2rem;
   background: var(--body-background-color);
   justify-items: center;
 }
+h1 {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;       /* controls size */
+  height: 100vh;
+  object-fit:contain;  /* cover the screen */
+  opacity: 0.3;       /* controls opacity */
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
 
 #nav-list {
     display: flex;
@@ -45,8 +68,8 @@ button {
 } */
 
 /* Mobile styles */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   body {
     background: var(--body-background-color-phone);
     }
-}
+} */
