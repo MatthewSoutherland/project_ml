@@ -1,0 +1,17 @@
+https://weworkremotely.com/
+
+These are good for breadth, but you’ll want to tailor your resume heavily.
+
+LinkedIn Jobs
+    * Search:
+        * “Software Engineer Remote”
+        * “Manufacturing Software Engineer”
+        * “Industrial Software Engineer”
+    * Pro tip: Filter by Remote + Mid/Senior and apply directly on company sites when possible.
+
+Indeed
+Surprisingly strong for manufacturing-tech crossover roles.
+    *Search terms:
+        * MES Software Engineer
+        * CAM Software Developer
+        * Manufacturing Systems Engineer
