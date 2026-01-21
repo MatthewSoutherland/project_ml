@@ -1,4 +1,7 @@
-https://weworkremotely.com/
+Remote job websites
+    https://weworkremotely.com/
+    https://remoteok.com/
+    https://wellfound.com/
 
 These are good for breadth, but you’ll want to tailor your resume heavily.
 
@@ -15,3 +18,38 @@ Surprisingly strong for manufacturing-tech crossover roles.
         * MES Software Engineer
         * CAM Software Developer
         * Manufacturing Systems Engineer
+
+🔹 Manufacturing / Industrial Software Companies (YOUR SWEET SPOT)
+Look for companies building:
+    * CAM software
+    * MES / ERP
+    * Digital twin
+    * Factory automation
+    * CNC simulation
+    * Toolpath optimization
+    * Industrial IoT
+
+Examples:
+    * Autodesk (Fusion 360, PowerMill)
+    * Siemens (NX, Teamcenter)
+    * Dassault Systèmes (SolidWorks CAM)
+    * Hexagon
+    * Mastercam
+    * Esprit
+    * Toolpath / MES startups
+
+    Many of these hire remote or hybrid and love people who can talk to machinists and write code.
+    Search terms:
+
+    “Manufacturing Software Engineer”
+    “CAM Software Developer”
+    “Industrial Automation Software Engineer”
+
+What a Hiring Manager Actually Looks For
+They will usually:
+     * Click your GitHub
+     * Look at top 3–5 pinned repos
+     * Open one repo
+     * Read the README
+     * Skim code structure
+     * Leave
