@@ -4,6 +4,7 @@
     --body-background-color-phone: rgb(155, 245, 155);
     --nav-list-color: rgb(10, 10, 254);
     --nav-list-hover: rgb(80, 80, 254);
+    --modal-background-color: rgba(0, 0, 0, 1);
     --modal-content-background-color: rgb(254, 254, 254);
     --modal-header-background-color: #f1f1f1;
     /* primary-colors */
@@ -77,24 +78,6 @@ button {
   z-index: -1;
 }
 
-#nav-list {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#nav-list li {
-    color: var(--nav-list-color);
-    cursor: pointer;
-    font-size: 28px;
-}
-
-#nav-list li:hover {
-  color: var(--nav-list-hover);
-}
 
 .modal {
     display: none;
@@ -124,8 +107,15 @@ button {
 .pictures-one {
   object-fit: contain;
   display: none;
-  width: 85vw;
+  width: 90vw;
   height: auto;
+}
+
+#butts {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--modal-background-color);
 }
 
 
@@ -256,13 +246,9 @@ button {
 .unit-button {
     background-color: var(--unit-button-background); /* Base color: dark gray */
     border: none;
-    padding: 3px 5px;
     text-align: center;
-    font-size: 16px;
-    margin: 1px;
     cursor: pointer;
     border: 1px solid black;
-    height: 2.6rem;
     color: var(--button-text-color-white);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }

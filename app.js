@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     const width = window.innerWidth;
     const height = window.innerHeight;
-    const dpr = window.devicePixelRatio || 1;
+    const dpr2 = window.devicePixelRatio || 1; //DPR = physical pixels ÷ CSS pixels
+
+    const dpr = dpr2.toFixed(3)
 
     el.textContent = `Viewport: ${width} × ${height} (DPR: ${dpr})`;
     const listItem1 = document.getElementById("item-1");
