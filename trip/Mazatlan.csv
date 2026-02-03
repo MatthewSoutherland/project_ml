@@ -1,0 +1,8 @@
+Website, total_time, stops, layover, cost, from, airliner, dates, round_trip, note
+Expedia, 9h44m, 2, 1h-each, 692, flint, american, 13, yes, return too long
+Expedia, 9h44m, 2, 1h-each, 431, flint, american, 13, no
+Expedia, 7h44m, 1, 1h, 771, Detroit, american, 13, yes, return too long 
+Expedia, 7h44m, 1, 1h, 407, Detroit, american, 13, no,
+Expedia, 9h7m, 1, 3h, 497, to: Detroit, mesa, 22, no, one way from Mazatlan 
+
+Priceline, 9h44m, 2, 1h-each, 686, flint, american, 13, yes, return too long
