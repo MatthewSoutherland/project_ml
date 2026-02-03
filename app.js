@@ -68,16 +68,12 @@ const runPictures = {
 
     openModal: function() {
         document.getElementById('pictures-one-modal').style.display='block';
-        let oneShowing = false;
         const pictures = document.getElementById('pictures-one-div').children;
         for (const pic of pictures) {
-            if (pic.style.display == 'block') {
-                oneShowing = true;
-            } else {
-                oneShowing = false;
-            }
+            console.log(`pic.style.display: ${pic.style.display}`);
+            pic.style.display = 'none';
         }
-        if (!oneShowing) pictures[0].style.display = 'block';
+        pictures[0].style.display = 'block';
     },
 
     closeModal: function() {
