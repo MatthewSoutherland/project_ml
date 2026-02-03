@@ -19,6 +19,10 @@
     --delete-button-hover-background: rgb(200, 15, 15);
     --delete-button-active-background: rgb(170, 15, 15);
 
+    --unit-button-background: rgb(20, 70, 255);
+    --unit-button-hover-background: rgb(20, 90, 255);
+    --unit-button-active-background: rgb(0, 0, 205);
+
     /* softer-colors */
     --light-blue-button-background: rgb(50, 170, 250);
     --light-blue-button-hover-background: rgb(40, 150, 250);
@@ -119,8 +123,8 @@ button {
 .pictures-one {
   object-fit: contain;
   display: none;
-  width: 200px;
-  height: 260px;
+  width: 400px;
+  height: 534px;
 }
 
 .primary-button {
@@ -237,4 +241,30 @@ button {
 .light-grey-button:active {
     background-color: var(--light-grey-button-active-background);
     transform: translate(0.05rem, 0.05rem);
+}
+
+.unit-button {
+    background-color: var(--unit-button-background); /* Base color: dark gray */
+    border: none;
+    padding: 3px 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 2.6rem;
+    color: var(--button-text-color-white);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.unit-button:hover {
+    background-color: var(--unit-button-hover-background);
+    transform: scale(1.04);
+}
+
+.unit-button:active,
+.unit-button.active {
+    transform: scale(0.98);
+    background-color: var(--unit-button-active-background);
 }

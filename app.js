@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", async function() {
     listItem1.addEventListener("click", function() {
         runPictures.openModal();
     });
-    document.getElementById('stop-btn').addEventListener('click', () => runPictures.stopPictures());
     document.getElementById('play-btn').addEventListener('click', () => runPictures.run());
+    document.getElementById('next-btn').addEventListener('click', () => runPictures.next());
+    document.getElementById('stop-btn').addEventListener('click', () => runPictures.stopPictures());
     document.getElementById('close-pictures-one').addEventListener('click', () => runPictures.closeModal());
 });
 
@@ -24,11 +25,10 @@ const runPictures = {
     }, 
 
     run: async function(){
+        if (this.isPlaying == true) return; // prevent calling twice and doubling speed
         this.isPlaying = true;
-        const modal = document.getElementById('pictures-one-modal');
         const pictures = document.getElementById('pictures-one-div').children;
 
-        modal.style.display = 'block';
         
         while (this.isPlaying) {
             for (const pic of pictures) {
@@ -36,7 +36,7 @@ const runPictures = {
             }
 
             pictures[this.currentIndex].style.display = 'block';
-            await this.sleep(1000);
+            await this.sleep(800);
 
             if (this.currentIndex + 1 == pictures.length) {
                 this.currentIndex = 0;
@@ -46,12 +46,38 @@ const runPictures = {
         }
     },
 
+    next: async function() {
+        this.isPlaying = false;
+        const pictures = document.getElementById('pictures-one-div').children;
+
+        for (const pic of pictures) {
+                pic.style.display = 'none';
+            }
+
+        if (this.currentIndex + 1 == pictures.length) {
+            this.currentIndex = 0;
+        }  else {
+            this.currentIndex += 1;
+        }
+        pictures[this.currentIndex].style.display = 'block';
+    },
+
     stopPictures: function() {
         this.isPlaying = false;
     },
 
     openModal: function() {
         document.getElementById('pictures-one-modal').style.display='block';
+        let oneShowing = false;
+        const pictures = document.getElementById('pictures-one-div').children;
+        for (const pic of pictures) {
+            if (pic.style.display == 'block') {
+                oneShowing = true;
+            } else {
+                oneShowing = false;
+            }
+        }
+        if (!oneShowing) pictures[0].style.display = 'block';
     },
 
     closeModal: function() {
