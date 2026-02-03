@@ -60,9 +60,10 @@ h1 {
 }
 
 button {
-  padding: .4rem .8rem;
-  font-size: 1rem;
+  padding: 1rem 2rem;
+  font-size: 3rem;
   align-self: center;
+  border-radius: 0.5rem;
 }
 
 .bg {
@@ -146,7 +147,6 @@ button {
     background-color: var(--primary-button-background);
     color: var(--button-text-color-white);
     border: 2px solid black;
-    border-radius: 0.2rem;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
@@ -165,7 +165,6 @@ button {
     background-color: var(--insert-button-background);
     color: var(--button-text-color-white);
     border: 2px solid black;
-    border-radius: 0.2rem;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     cursor: pointer;
     font-family: Helvetica;
@@ -184,7 +183,6 @@ button {
     background-color: var(--delete-button-background);
     color: var(--button-text-color-white);
     border: 2px solid black;
-    border-radius: 0.2rem;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     cursor: pointer;
     font-family: Helvetica;
@@ -203,7 +201,6 @@ button {
     background-color: var(--light-blue-button-background);
     color: var(--button-text-color-white);
     border: 2px solid black;
-    border-radius: 0.2rem;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
@@ -223,7 +220,6 @@ button {
     background-color: var(--grey-button-background);
     color: var(--button-text-color);
     border: 2px solid black;
-    border-radius: 0.2rem;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     cursor: pointer;
     font-family: Helvetica;
@@ -243,7 +239,6 @@ button {
     background-color: var(--light-grey-button-background);
     color: var(--button-text-color);
     border: 2px solid black;
-    border-radius: 0.2rem;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
     cursor: pointer;
     font-family: Helvetica;
@@ -266,7 +261,6 @@ button {
     font-size: 16px;
     margin: 1px;
     cursor: pointer;
-    border-radius: 5px;
     border: 1px solid black;
     height: 2.6rem;
     color: var(--button-text-color-white);
