@@ -130,6 +130,12 @@ button {
     width: 400px;
     height: 534px;
   }
+  button {
+  padding: .4rem .8rem;
+  font-size: 1rem;
+  align-self: center;
+  border-radius: 0.2rem;
+}
 }
 
 
