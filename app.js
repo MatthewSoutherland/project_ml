@@ -1,6 +1,12 @@
 
 document.addEventListener("DOMContentLoaded", async function() {
-    console.log("js read");
+    const el = document.getElementById("device-size");
+
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+
+    el.textContent = `Viewport: ${width} × ${height} (DPR: ${dpr})`;
     const listItem1 = document.getElementById("item-1");
     listItem1.addEventListener("click", function() {
         runPictures.openModal();
@@ -36,7 +42,7 @@ const runPictures = {
             }
 
             pictures[this.currentIndex].style.display = 'block';
-            await this.sleep(800);
+            await this.sleep(600);
 
             if (this.currentIndex + 1 == pictures.length) {
                 this.currentIndex = 0;
@@ -70,7 +76,6 @@ const runPictures = {
         document.getElementById('pictures-one-modal').style.display='block';
         const pictures = document.getElementById('pictures-one-div').children;
         for (const pic of pictures) {
-            console.log(`pic.style.display: ${pic.style.display}`);
             pic.style.display = 'none';
         }
         pictures[0].style.display = 'block';

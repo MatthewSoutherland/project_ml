@@ -123,9 +123,24 @@ button {
 .pictures-one {
   object-fit: contain;
   display: none;
-  width: 400px;
-  height: 534px;
+  width: 85vw;
+  height: auto;
 }
+
+
+@media (min-width: 1200px) {
+  #pictures-one-div {
+    display: flex;
+    justify-content: center;
+  }
+  .pictures-one {
+    object-fit: contain;
+    display: none;
+    width: 400px;
+    height: 534px;
+  }
+}
+
 
 .primary-button {
     background-color: var(--primary-button-background);
@@ -268,3 +283,5 @@ button {
     transform: scale(0.98);
     background-color: var(--unit-button-active-background);
 }
+
+
