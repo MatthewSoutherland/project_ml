@@ -44,7 +44,7 @@ const runPictures = {
             }
 
             pictures[this.currentIndex].style.display = 'block';
-            await this.sleep(600);
+            await this.sleep(800);
 
             if (this.currentIndex + 1 == pictures.length) {
                 this.currentIndex = 0;
