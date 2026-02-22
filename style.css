@@ -100,18 +100,18 @@ button {
     /* border: 1px solid var(--modal-border-color);
     border-radius: 5px; */
 }
-#pictures-one-div {
+#pictures-one-div, #pictures-two-div {
   display: flex;
   justify-content: center;
 }
-.pictures-one {
+.pictures-one, .pictures-two {
   object-fit: contain;
   display: none;
   width: 90vw;
   height: auto;
 }
 
-#butts {
+#butts, #butts2 {
   display: flex;
   justify-content: center;
   gap: 5px;
@@ -120,11 +120,11 @@ button {
 
 
 @media (min-width: 1200px) {
-  #pictures-one-div {
+  #pictures-one-div, #pictures-two-div {
     display: flex;
     justify-content: center;
   }
-  .pictures-one {
+  .pictures-one, .pictures-two {
     object-fit: contain;
     display: none;
     width: 400px;

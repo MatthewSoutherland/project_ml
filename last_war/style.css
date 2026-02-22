@@ -1,0 +1,44 @@
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(50, 13px);
+  grid-template-rows: repeat(50, 13px);
+  margin: 30px auto;
+  width: fit-content;
+}
+
+.tile {
+  width: 13px;
+  height: 13px;
+  border: 1px solid #1f2933;
+  box-sizing: border-box;
+}
+
+/* Tile types */
+.tile.empty {
+  background: rgb(50,50,50);
+}
+
+.tile.base {
+  background: #2563eb;
+}
+
+.tile.tradeCenter {
+  background: #f59e0b;
+  z-index: 9;
+}
+
+.tile.trade {
+  background: red;
+}
+
+.tile.mud {
+  background: rgb(121, 85, 72);
+  z-index: 4;
+}

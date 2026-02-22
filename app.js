@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
     el.textContent = `Viewport: ${width} × ${height} (DPR: ${dpr})`;
     const listItem1 = document.getElementById("item-1");
+    document.getElementById("item-2").addEventListener('click', () => runPictures2.run());
     listItem1.addEventListener("click", function() {
         runPictures.openModal();
     });
@@ -22,6 +23,56 @@ document.addEventListener("DOMContentLoaded", async function() {
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const runPictures2 = {
+    currentIndex: 0,
+    cycleCount: 0,
+
+    run: async function() {
+        this.openModal();
+        const pictures = document.getElementById('pictures-two-div').children;
+        
+        while (this.cycleCount < 4) {
+            for (const pic of pictures) {
+                pic.style.display = 'none';
+            }
+            
+            pictures[this.currentIndex].style.display = 'block';
+            const slp = this.calculateSpeed();
+            await sleep(slp);
+            
+            if (this.currentIndex + 1 == pictures.length) {
+                this.currentIndex = 0;
+                this.cycleCount += 1;
+            } else {
+                this.currentIndex += 1;
+            }
+        }
+        this.closeModal();
+    },
+    
+    calculateSpeed: function() {
+        const speedSlider = document.getElementById('speedSlider').value;
+        const speed = 3300 - speedSlider * 300
+        console.log(`speedSlider: ${speed}`);
+        return speed;
+    },
+
+    openModal: function() {
+        runPictures.closeModal();
+        document.getElementById('pictures-two-modal').style.display='block';
+        const pictures = document.getElementById('pictures-two-div').children;
+        for (const pic of pictures) {
+            pic.style.display = 'none';
+        }
+        pictures[0].style.display = 'block';
+    },
+    closeModal: function() {
+        this.currentIndex = 0;
+        this.cycleCount = 0;
+        document.getElementById('pictures-two-modal').style.display='none';    
+    },
 }
 
 const runPictures = {
@@ -75,6 +126,7 @@ const runPictures = {
     },
 
     openModal: function() {
+        runPictures2.closeModal();
         document.getElementById('pictures-one-modal').style.display='block';
         const pictures = document.getElementById('pictures-one-div').children;
         for (const pic of pictures) {

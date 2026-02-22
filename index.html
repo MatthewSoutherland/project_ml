@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <title>Project ML</title>
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=9" />
 </head>
 <body>
     <img class="bg" src="pictures/bg-img.png" alt="Background">
     <h1>Matt Y Luz</h1>
     <div id="ui-buttons">
       <button type="button" id="item-1" class="unit-button">Foto 1</button>
+      <button type="button" id="item-2" class="unit-button">Besos</button>
       <h1 id="device-size"><h1/>
     </div>
   <div id="pictures-one-modal" class="modal">
@@ -39,6 +40,20 @@
       </div>
     </div>
   </div>
-  <script src="app.js?v=5"></script>
+  <div id="pictures-two-modal" class="modal">
+    <div class="modal-content">
+      <div id="pictures-two-div">
+        <img id="pic1" class="pictures-one" src="pictures/beso1.jpg" alt="picture">
+        <img id="pic2" class="pictures-one" src="pictures/beso2.jpg" alt="picture">
+        <img id="pic3" class="pictures-one" src="pictures/beso3.jpg" alt="picture">
+        <img id="pic4" class="pictures-one" src="pictures/beso4.jpg" alt="picture">
+        <img id="pic5" class="pictures-one" src="pictures/beso5.jpg" alt="picture">
+      </div>
+      <div id="butts2">
+        <input type="range" id="speedSlider" min="1" max="10" value="5" />
+      </div>
+    </div>
+  </div>
+  <script src="app.js?v=6"></script>
 </body>
 </html>
