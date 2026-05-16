@@ -3,6 +3,8 @@ The process “family petition for a foreign spouse” will be carried out.
     
 1. Get legally married.
 2. Matt files Form I-130 (Petition for Alien Relative). During this process, evidence of the genuine relationship and documents from both parties are submitted.
+  - instuctions downloaded.  
+  - 625$ online or 675$ paper form.
 3. Wait for I-130 approval. Estimated processing time: 10 to 18 months (constantly varies). Once USCIS approves the petition, the case is transferred to the NVC (National Visa Center).
 4. Consular process: The NVC requests:
 Payment of fees
