@@ -1,0 +1,15 @@
+You will arrive at 5:20 pm, on 8-19-2026, at Amsterdam airport -> AMS 
+    - Correct 
+
+Return Amsterdam - Mexico on August 27 at 10:00 pm
+
+500$ for trip to Venice.
+
+Expedia.com:
+Trip, Price, Airline, Stops, Arrival time, travel time
+Flint to AMS, 1070, British Airways BA4403, 2, 5:35 pm Aug 19, 18h 
+Flint to AMS, 1200, American Airline, 2, 5:15 pm Aug 19, 18.5h
+Flint to AMS, 1200, American Airline, 2, 4:20 pm Aug 19, 16.5h
+Saginaw to Ams, 1040, Delta, 1, 12:20 pm Aug 19, 12h
+
+Expedia itinerary number: 73456950526461
