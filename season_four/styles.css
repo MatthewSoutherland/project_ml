@@ -5,8 +5,11 @@
 }
 
 :root {
+    --bodyBackGroundColor: rgb(140, 170, 200);
     --geekColor: rgb(50, 50, 250);
     --oniColor: rgb(250, 100, 160);
+    --tradeStoreColor: rgb(55, 180, 40);
+    --legendBackGroundColor: rgb(170, 200, 230);
 }
 
 body {
@@ -15,7 +18,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(135, 165, 200);
+    background: var(--bodyBackGroundColor);
     font-family: Arial, sans-serif;
 }
 
@@ -26,18 +29,43 @@ body {
     gap: 2rem;
 }
 
+#bottom-container {
+    position: relative;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(13, 40px);
+    grid-template-rows: repeat(13, 40px);
+    gap: 1px;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
 /* ------- TOGGLES --------- */
+#rs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: var(--legendBackGroundColor);
+    padding: 14px 20px;
+    
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    width: fit-content;
+    font-family: Arial, sans-serif;
+}
+
 .toggle-container {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-top: 1px;
 }
 
 .toggle {
     position: relative;
     width: 70px;
-    height: 38px;
+    height: 30px;
 }
 
 .toggle input {
@@ -57,8 +85,8 @@ body {
 .slider::before {
     content: "";
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 22px;
+    height: 22px;
     left: 4px;
     top: 4px;
     background: white;
@@ -73,11 +101,10 @@ input:checked + .slider {
 }
 
 input:checked + .slider::before {
-    transform: translateX(32px);
+    transform: translateX(41px);
 }
 
 .toggle-label {
-    color: white;
     font-size: 1.1rem;
     min-width: 35px;
     transition: color 0.3s ease;
@@ -87,38 +114,99 @@ input:checked + .slider::before {
 .legend {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
     padding: 14px 20px;
     background: rgba(255, 255, 255, 0.08);
+    background-color: var(--legendBackGroundColor);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 14px;
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     width: fit-content;
     font-family: Arial, sans-serif;
-    color: white;
 }
 
 .legend-item {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.95rem;
+    gap: 6px;
+    font-size: 1.1rem;
 }
 
 .legend-color {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     display: inline-block;
     box-shadow: 0 0 8px rgba(255,255,255,0.15);
 }
 
-.geekLand {
+.legend-color.geekLand {
     background: var(--geekColor);
-    box-shadow: var(--geekColor);
 }
-.oni {
+
+.legend-color.oni {
     background: var(--oniColor);
-    box-shadow: var(--oniColor);
+}
+
+.legend-color.trade-store {
+    background: var(--tradeStoreColor);
+}
+
+/* ------ MAP ------- */
+
+
+.map-cell {
+    width: 40px;
+    height: 40px;
+    background: #e7d6a5;
+    border: 1px solid rgba(0,0,0,0.35);
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: rgba(0,0,0,0.55);
+    overflow: hidden;
+}
+
+.map-cell.geekLand {
+    background: var(--geekColor);
+    color: white;
+}
+
+.map-cell.oni {
+    background: var(--oniColor);
+    color: white;
+}
+
+.map-cell.general {
+    outline: 3px solid gold;
+    box-shadow: 0 0 12px gold;
+}
+
+.map-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.map-cell.trade-store {
+    background: var(--tradeStoreColor);
+    color: black;
+}
+
+.trade-store-overlay {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--tradeStoreColor);
+    border: 2px solid black;
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.85;
 }
